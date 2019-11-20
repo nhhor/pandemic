@@ -7,7 +7,7 @@
 ## Description:
 This project was made as part of a coding project for Noah Horwitz & Lee Pedersen, students at _[Epicodus](http://www.epicodus.com)_, a vocational school for technology careers, based in Portland, OR. The project is designed to create an application that resembles some of the aspects of the popular board game, Pandemic.
 
-<!-- The fully deployed project is hosted on GH-Pages [HERE](https://nhhor.github.io/solar-age-calculator). -->
+The fully deployed project is hosted on GH-Pages [HERE](https://nhhor.github.io/pandemic).
 
 ## Setup/Installation instructions:
 * Click the `Clone or download` button and copy the link.
