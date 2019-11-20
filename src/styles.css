@@ -6,21 +6,21 @@
   width: 17vw;
   border-style: inset;
   border-width: 1px;
-  border-color: #bf400a;
+  border-color: #a4cb6e;
 }
 
 body {
   background-color: black;
   color: white;
-  font-size: 25px;
+  font-size: 20px;
 }
 
 span {
   position: absolute;
   margin-left: 10px;
-  color: #bf400a;
-  background-color:rgba(0,0,0,0.7);
-  border: 10px;
+  color: #a4cb6e;
+  background-color:rgba(0,64,0,0.7);
+
   border-radius: 50%;
   padding-left: 10px;
   padding-right: 10px;
@@ -52,7 +52,7 @@ td {
 }
 
 #showResults {
-  font-size: 100px;
+  font-size: 72px;
   text-align: center;
   background-image: radial-gradient(circle, rgba(255,0,0,1) 0%, rgba(255,255,255,0) 100%);
   /* position: sticky; */
@@ -61,7 +61,11 @@ td {
 }
 
 .instructions {
-  font-size: 18px;
+  font-size: 16px;
   padding-left: 30px;
   padding-right: 15px;
+}
+
+#newGame {
+  display: none;
 }

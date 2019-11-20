@@ -7,11 +7,12 @@
     "build": "webpack --mode development",
     "start": "npm run build; webpack-dev-server --open --mode development",
     "lint": "eslint src/*.js",
-    "test": "jest"
+    "test": "jest",
+    "debug": "node --inspect node_modules/.bin/jest --runInBand"
   },
   "keywords": [],
   "author": "Noah Horwitz & Lee Pedersen",
-  "license": "ISC",
+  "license": "gpl-3.0",
   "devDependencies": {
     "@babel/core": "^7.6.4",
     "@babel/plugin-transform-modules-commonjs": "^7.6.0",
@@ -32,13 +33,5 @@
     "bootstrap": "^4.3.1",
     "jquery": "^3.4.1",
     "popper.js": "^1.16.0"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/LeePedersen/TEMPLATE.git"
-  },
-  "bugs": {
-    "url": "https://github.com/LeePedersen/TEMPLATE/issues"
-  },
-  "homepage": "https://github.com/LeePedersen/TEMPLATE#readme"
+  }
 }

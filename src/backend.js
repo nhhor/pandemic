@@ -77,9 +77,9 @@ export class World {
   results() {
     let score = this.score();
     if (score <= 0) {
-      return "You cured the planet";
+      return "You cured the planet!";
     } else if (score > 250) {
-      return "Everyone's dead";
+      return "The world is doomed.";
     }
   }
 

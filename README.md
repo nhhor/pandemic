@@ -35,7 +35,10 @@ This project was made as part of a coding project for Noah Horwitz & Lee Pederse
 |City has timer trigger if `contamination` > 0 every 10 seconds|`contamination` = 1, useFakeTimers(10001)|`contamination` = 2|
 
 ## References
-* None
+* `Siren` sound provided by snottyboy under [Attribution 3.0](https://creativecommons.org/licenses/by/3.0/us/) license.
+* `Tick` sound provided by DeepFrozenApps under [Attribution 3.0](https://creativecommons.org/licenses/by/3.0/us/) license.
+* `TaDa` sound provided by Mike Koenig under [Attribution 3.0](https://creativecommons.org/licenses/by/3.0/us/) license.
+* `SadSound` sound provided by Mike Koenig under [Attribution 3.0](https://creativecommons.org/licenses/by/3.0/us/) license.
 
 ## Support and contact details
 Contact [example@sample.com](mailto:example@sample.com)

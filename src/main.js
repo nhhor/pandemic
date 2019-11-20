@@ -2,18 +2,23 @@ import $ from 'jquery';
 import 'bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './styles.css';
-// import { City } from "./backend.js";
 import { World } from "./backend.js";
 
-//
-// let oregon = new State();
+import tick from './audio/tick.mp3';
+const tickSound = new Audio();
+tickSound.src = tick;
 
-// for (let i = 0; i < 26; i++) {
-//   let ("city" + i) = new City(i);
-//   oregon.cities.push("city" + i);
-// }
+import siren from './audio/siren.mp3';
+const sirenSound = new Audio();
+sirenSound.src = siren;
 
+import tada from './audio/tada.mp3';
+const tadaSound = new Audio();
+tadaSound.src = tada;
 
+import sad from './audio/sad.mp3';
+const sadSound = new Audio();
+sadSound.src = sad;
 
 $(document).ready(function(){
   $("#startGame").click(function(){
@@ -24,15 +29,24 @@ $(document).ready(function(){
     earth.randomContamination();
     earth.infectOther();
     let method;
+    sirenSound.play();
+    $("#startGame").fadeOut(250);
+    $(".instructions").fadeOut(250);
 
     setTimeout(() => {
-      $(".instructions").fadeOut(500);
-      $("#vaccinate").slideDown(500);
+      $("#vaccinate").slideDown(1000);
     }, 7500);
 
     setTimeout(() => {
       $("#treat").slideDown(500);
     }, 15000);
+
+    // AUDIO TICK
+    let tick = setInterval(() => {
+      tickSound.play();
+    }, 1000);
+
+
 
     setInterval(() => {
       for (let i = 0; i < 25; i++) {
@@ -63,11 +77,23 @@ $(document).ready(function(){
     }, 101);
 
 
-    setInterval(() => {
-      if (earth.results()) {
+    let winCondition = setInterval(() => {
+      if (earth.results() === "You cured the planet!") {
         $("#results").text(earth.results());
+        clearInterval(tick);
+        tadaSound.play();
+        clearInterval(winCondition);
+        $("#newGame").slideDown(3000);
       }
-    });
+      else if (earth.results() === "The world is doomed.") {
+        $("#results").text(earth.results());
+        clearInterval(tick);
+        sadSound.play();
+        clearInterval(winCondition);
+        $("#newGame").slideDown(3000);
+      }
+    },100);
+
 
     $("#vaccinate").click(function() {
       method = "vaccinate";
